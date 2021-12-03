@@ -1,0 +1,226 @@
+<h2>Registrate</h2>
+
+<form class="row g-3 needs-validation" novalidate [formGroup]="formulario">
+
+  <div class="col-md-4">
+    <label for="validationCustom01" class="form-label">Nombres</label>
+    <input type="text" class="form-control" id="validationCustom01" required>
+    <div class="valid-feedback">
+      Looks good!
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <label for="validationCustom02" class="form-label">Apellido Paterno</label>
+    <input type="text" class="form-control" id="validationCustom02" required>
+    <div class="valid-feedback">
+      Looks good!
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <label for="validationCustom03" class="form-label">Apellido Materno</label>
+    <input type="text" class="form-control" id="validationCustom03" required>
+    <div class="valid-feedback">
+      Looks good!
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <label for="exampleInputEmail1" class="form-label">Emial(Correo Institucional)</label>
+    <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" required>
+    <div *ngIf="email.errors && email.touched">
+      <p *ngIf="email.hasError('required')">Dato Requerido</p>
+      <p *ngIf="email.hasError('email')">Correo Incorrecto</p>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <label for="exampleInputTelefono1" class="form-label">Telefono</label>
+    <input formControlName="telefono" type="telefono" class="form-control" id="exampleInputTelefono1">
+    <div *ngIf="telefono.errors && telefono.touched">
+      <p *ngIf="telefono.hasError('required')">Dato Requerido</p>
+      <p *ngIf="telefono.hasError('maxlength')">Solo es de 10 Digitos</p>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <label for="validationCustom06" class="form-label">CURP</label>
+    <input type="text" class="form-control" id="validationCustom06" required>
+  </div>
+
+  <div class="col-md-2">
+    <label for="validationCustom07" class="form-label">Puesto</label>
+    <select class="form-select" id="validationCustom07" required>
+      <option selected disabled value="">Choose...</option>
+      <option>...</option>
+    </select>
+    <div class="invalid-feedback">
+      Please select a valid state.
+    </div>
+  </div>
+
+  <div class="col-md-2">
+    <label for="validationCustom08" class="form-label">Área</label>
+    <select class="form-select" id="validationCustom08" required>
+      <option selected disabled value="">Choose...</option>
+      <option>...</option>
+    </select>
+    <div class="invalid-feedback">
+      Please select a valid state.
+    </div>
+  </div>
+
+  <div class="col-md-2">
+    <label for="validationCustom09" class="form-label">Sexo</label>
+    <select class="form-select" id="validationCustom09" required>
+      <option>Masculino</option>
+      <option>Femenino</option>
+    </select>
+    <div class="invalid-feedback">
+      Please select a valid state.
+    </div>
+  </div>
+
+  <div class="col-md-2">
+    <label for="validationCustom10" class="form-label">Día</label>
+    <select class="form-select" id="validationCustom10" required>
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+      <option>6</option>
+      <option>7</option>
+      <option>8</option>
+      <option>9</option>
+      <option>10</option>
+      <option>11</option>
+      <option>12</option>
+      <option>13</option>
+      <option>14</option>
+      <option>15</option>
+      <option>16</option>
+      <option>17</option>
+      <option>18</option>
+      <option>19</option>
+      <option>20</option>
+      <option>21</option>
+      <option>22</option>
+      <option>23</option>
+      <option>24</option>
+      <option>25</option>
+      <option>26</option>
+      <option>27</option>
+      <option>28</option>
+      <option>29</option>
+      <option>30</option>
+      <option>31</option>
+    </select>
+    <div class="invalid-feedback">
+      Please select a valid state.
+    </div>
+  </div>
+
+  <div class="col-md-2">
+    <label for="validationCustom11" class="form-label">Mes</label>
+    <select class="form-select" id="validationCustom11" required>
+      <option>Enero</option>
+      <option>Febrero</option>
+      <option>Marzo</option>
+      <option>Abril</option>
+      <option>Mayo</option>
+      <option>Junio</option>
+      <option>Julio</option>
+      <option>Agosto</option>
+      <option>Septiembre</option>
+      <option>Octubre</option>
+      <option>Noviembre</option>
+      <option>Diciembre</option>
+    </select>
+    <div class="invalid-feedback">
+      Please select a valid state.
+    </div>
+  </div>
+
+  <div class="col-md-2">
+    <label for="validationCustom12" class="form-label">Año</label>
+    <select class="form-select" id="validationCustom12" required>
+      <option>2021</option>
+      <option>2020</option>
+      <option>2019</option>
+      <option>2018</option>
+      <option>2017</option>
+      <option>2016</option>
+      <option>2015</option>
+      <option>2014</option>
+      <option>2013</option>
+      <option>2012</option>
+      <option>2011</option>
+      <option>2010</option>
+      <option>2009</option>
+      <option>2008</option>
+      <option>2007</option>
+      <option>2006</option>
+      <option>2005</option>
+      <option>2004</option>
+      <option>2003</option>
+      <option>2002</option>
+      <option>2001</option>
+      <option>2000</option>
+      <option>1999</option>
+      <option>1998</option>
+      <option>1997</option>
+      <option>1996</option>
+      <option>1995</option>
+      <option>1994</option>
+      <option>1993</option>
+      <option>1992</option>
+      <option>1991</option>
+      <option>1990</option>
+    </select>
+    <div class="invalid-feedback">
+      Please select a valid state.
+    </div>
+  </div>
+
+  <div class="col-md-2">
+    <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+    <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1">
+    <div *ngIf="password.errors && password.touched">
+      <p *ngIf="password.hasError('required')">Dato Requerido</p>
+      <p *ngIf="password.hasError('pattern')">Solo un digito en mayuscula</p>
+      <p *ngIf="password.hasError('minlength')">tiene que ser de 8 digitos</p>
+    </div>
+  </div>
+
+  <div class="col-md-2">
+    <label for="validationCustom14" class="form-label">Calle</label>
+    <input type="text" class="form-control" id="validationCustom14" required>
+  </div>
+
+  <div class="col-md-2">
+    <label for="validationCustom15" class="form-label">Colonia</label>
+    <input type="text" class="form-control" id="validationCustom15" required>
+  </div>
+
+  <div class="col-md-2">
+    <label for="validationCustom16" class="form-label">Código Postal</label>
+    <input type="text" class="form-control" id="validationCustom16" required>
+  </div>
+
+  <div class="col-md-2">
+    <label for="validationCustom17" class="form-label">Estado</label>
+    <input type="text" class="form-control" id="validationCustom17" required>
+  </div>
+
+  <div class="col-md-2">
+    <label for="validationCustom18" class="form-label">Municipio</label>
+    <input type="text" class="form-control" id="validationCustom18" required>
+  </div>
+
+  <div class="col-12">
+    <button class="btn btn-dark" type="submit">Registrar</button>
+  </div>
+
+</form>
