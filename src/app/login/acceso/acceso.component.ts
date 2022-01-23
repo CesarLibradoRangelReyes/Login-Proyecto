@@ -12,11 +12,10 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class AccesoComponent implements OnInit {
 RegistroForm: FormGroup;
-id: string | null;
+
 
   constructor(private _registroService: RegistroService, private fb: FormBuilder,
-    private router: Router,
-    private aRouter: ActivatedRoute ) {
+    private router: Router ) {
     this.RegistroForm = this.fb.group({
       //Id_Registro:['', Validators.required],
       //Id_Datos_Personales: ['', Validators.required],
@@ -24,7 +23,6 @@ id: string | null;
       Usuario: ['', Validators.required],
       Password: ['', Validators.required]
     })
-    this.id = this.aRouter.snapshot.paramMap.get('id');
   }
 
   ngOnInit(): void {
@@ -39,21 +37,6 @@ id: string | null;
     })
   }
 
-  agregarRegistro(){
-    console.log(this.RegistroForm);
-    console.log(this.RegistroForm.get('Usuario')?.value);
-
-    const REGISTRO: Registro = {
-      //Id_Registro: this.RegistroForm.get('Id_Registro')?.value,
-      //Id_Datos_Personales: this.RegistroForm.get('Id_Datos_Personales')?.value,
-      //Id_Tipos: this.RegistroForm.get('Id_Tipos')?.value,
-      Usuario: this.RegistroForm.get('Usuario')?.value,
-      Password: this.RegistroForm.get('Password')?.value
-    }
-      console.log(REGISTRO);
-      this.router.navigate(['/']);
-  }
-
   signin(){
     const INGRESAR: Registro = {
       Usuario: this.RegistroForm.get('Usuario')?.value,
@@ -65,6 +48,5 @@ id: string | null;
         this.router.navigate(['/login/password']);
       }, err => console.log(err)
     );
-
   }
 }
