@@ -9,7 +9,8 @@ const routes: Routes = [
   {path: 'login', component: AccesoComponent,
   loadChildren: () => import('./login/login.module').then(m => m.LoginModule)},
   {path: 'registrar', component: RegistroComponent,
-    loadChildren: () => import('./login/login.module').then(m => m.LoginModule)}
+    loadChildren: () => import('./login/login.module').then(m => m.LoginModule)},
+    {path: '**', redirectTo: '', pathMatch: 'full'}
 ];
 
 @NgModule({
