@@ -14,10 +14,6 @@ url = 'http://localhost:3000/api/registro/'
   return this.http.get(this.url);
   }
 
-  obtenerRegistro(id: string): Observable<any>{
-    return this.http.get(this.url + id);
-  }
-
   signIn (usuario: Registro): Observable<any> {
     return this.http.post(this.url + 'signin', usuario);
   }
